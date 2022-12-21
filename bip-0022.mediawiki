@@ -34,7 +34,7 @@ Block template creation can be influenced by various parameters:
 |-
 ! Key !! Required !! Type !! Description
 |-
-| capabilities || No || Array of Strings || SHOULD contain a list of the following, to indicate client-side support: [[#Optional: Long Polling|"longpoll"]], "coinbasetxn", "coinbasevalue", [[bip-0023.mediawiki#Block Proposal|"proposal"]], [[bip-0023.mediawiki#Logical Services|"serverlist"]], "workid", and any of the [[bip-0023.mediawiki#Mutations|mutations]]
+| capabilities || No || Array of Strings || SHOULD contain a list of the following, to indicate client-side support: [[#Optional: Long Polling|"longpoll"]], "coinbasetxn", "coinbasevalue", [[bip-0023.mediawiki#block-proposal|"proposal"]], [[bip-0023.mediawiki#Logical Services|"serverlist"]], "workid", and any of the [[bip-0023.mediawiki#Mutations|mutations]]
 |-
 | mode || No || String || MUST be "template" or omitted
 |}
@@ -67,7 +67,7 @@ getblocktemplate MUST return a JSON Object containing the following keys:
 |-
 | coinbasevalue || this or ↑ || Number || total funds available for the coinbase (in Satoshis)
 |-
-| workid || No || String || if provided, this value must be returned with results (see [[#Block Submission|Block Submission]])
+| workid || No || String || if provided, this value must be returned with results (see [[#block-submission|Block Submission]])
 |}
 
 ==== Transactions Object Format ====
@@ -240,8 +240,8 @@ Why should "sigops" be provided for transactions?
 
 ==Reference Implementation==
 
-* [https://gitorious.org/bitcoin/eloipool Eloipool (server)]
-* [http://gitorious.org/bitcoin/libblkmaker libblkmaker (client)]
+* [https://github.com/luke-jr/eloipool Eloipool (server)]
+* [https://github.com/bitcoin/libblkmaker libblkmaker (client)]
 * [https://github.com/bitcoin/bitcoin/pull/936/files bitcoind (minimal server)]
 
 ==See Also==
